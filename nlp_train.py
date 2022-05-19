@@ -3,6 +3,8 @@ import os
 import pandas as pd
 import numpy as np 
 import datetime
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 from nlp_module import ExploratoryDataAnalysis, ModelCreation, ModelEvaluate
 
@@ -39,7 +41,11 @@ text[16]
 text_dummy.isna().sum()
 category_dummy.isna().sum()
 
+#%% visualize 
 
+sns.countplot(category)
+plt.title("Topics count")
+plt.show()
 #%%
 eda = ExploratoryDataAnalysis()
 
